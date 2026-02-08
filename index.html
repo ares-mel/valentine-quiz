@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valentine's Day Reading Comprehension Quiz">
+    <title>Valentine's Day Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="heart-icon">♥</div>
+            <h1>Valentine's Day Quiz</h1>
+            <p>Reading Comprehension • 10 Questions</p>
+        </div>
+    </header>
+
+    <!-- Mobile Tabs -->
+    <div class="mobile-tabs">
+        <button class="tab-btn active" data-tab="passage">
+            <span class="tab-icon">📖</span>
+            <span>Passage</span>
+        </button>
+        <button class="tab-btn" data-tab="quiz">
+            <span class="tab-icon">✏️</span>
+            <span>Quiz</span>
+            <span class="tab-badge" id="answeredCount">0/10</span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Passage Section -->
+        <section class="passage-section" id="passageSection">
+            <div class="section-card">
+                <div class="section-title">
+                    <span class="title-icon">📖</span>
+                    <h2>Text 17 – Valentine's Day</h2>
+                </div>
+                <div class="passage-body">
+                    <p><span class="ln">1</span>People in many different countries celebrate Valentine's Day. Each year
+                        <span class="ln">2</span>on February 14, friends and lovers exchange candy, flowers, love notes
+                        <span class="ln">3</span>and greeting cards. These gifts are used as special messages of
+                        friendship <span class="ln">4</span>and love. This tradition, as we know it today, has grown
+                        from two basic <span class="ln">5</span><em>roots</em>: the Roman festival of Lupercalia and the
+                        sad story of a Christian <span class="ln">6</span>doctor named Valentine.</p>
+
+                    <p><span class="ln">7</span>Many years ago, the Romans celebrated the festival of Lupercalia on
+                        <span class="ln">8</span>February 15. At first, the festival honoured the Roman god Lupercus,
+                        <span class="ln">9</span>keeper of the crops and farm animals. However, as time passed, the
+                        <span class="ln">10</span>Romans began to honour a different god during the festival. Her name
+                        was <span class="ln">11</span>Juno, queen of the Roman gods and guardian of women and marriage.
+                        At <span class="ln">12</span>the festival, all unmarried people played a special game. All the
+                        females <span class="ln">13</span>wrote their names on pieces of paper and dropped <em>them</em>
+                        into a big jar. <span class="ln">14</span>Then, all the males drew names from the jar and spent
+                        the festival dancing <span class="ln">15</span>with the person whose name they had selected.</p>
+
+                    <p><span class="ln">16</span>Celebrations of fun and love are still a part of today's Valentine
+                        <span class="ln">17</span>tradition. More than 2,000 years ago in Rome, there was a Christian
+                        doctor <span class="ln">18</span>named Valentine. According to the legend, Valentine had special
+                        abilities <span class="ln">19</span>that allowed him to <em>cure</em> many diseases. However, a
+                        Roman emperor <span class="ln">20</span>named Claudius did not like Valentine's Christian
+                        beliefs. At that time, <span class="ln">21</span>most Romans believed in different gods and
+                        goddesses. Claudius <span class="ln">22</span>said Valentine must be sent to death for his
+                        unpopular Christian <span class="ln">23</span>beliefs. While he was imprisoned, Valentine became
+                        friends with the <span class="ln">24</span>jailer's blind daughter and taught her special
+                        abilities to cure her <span class="ln">25</span>blindness. Valentine was killed on February 14,
+                        but before he died, he sent <span class="ln">26</span>a special note to the girl and signed it
+                        "Your Valentine". This friendship <span class="ln">27</span>was the world's first Valentine
+                        message.</p>
+
+                    <p><span class="ln">28</span>Eventually, the Christians became more powerful in Rome. They <span
+                            class="ln">29</span>wanted people to stop the festival of Lupercalia because it honoured
+                        gods <span class="ln">30</span>that were not Christian. At that time, the people loved their
+                        festival and <span class="ln">31</span>did not want it to end. So, the Christian leaders
+                        encouraged people to <span class="ln">32</span>celebrate St. Valentine at the festival because
+                        they viewed him as an <span class="ln">33</span>example of their religion. Since then, the
+                        traditions of Valentine's Day have <span class="ln">34</span>changed, but the day is still seen
+                        as a special time to honour the <span class="ln">35</span>celebration of love and friendship.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section" id="quizSection">
+            <!-- Progress Bar -->
+            <div class="progress-wrapper">
+                <div class="progress-info">
+                    <span>Progress</span>
+                    <span id="progressText">0 of 10 answered</span>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- Questions -->
+            <form class="quiz-form" id="quizForm">
+                <div class="questions-grid" id="questionsGrid">
+                    <!-- Generated by JS -->
+                </div>
+
+                <div class="submit-wrapper" id="submitWrapper">
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Submit Quiz
+                    </button>
+                </div>
+            </form>
+
+            <!-- Results -->
+            <div class="results" id="results">
+                <div class="results-inner">
+                    <div class="results-emoji">🎉</div>
+                    <h2>Quiz Complete!</h2>
+                    <div class="results-score">
+                        <span class="score-value" id="scoreValue">0</span>
+                        <span class="score-max">/10</span>
+                    </div>
+                    <div class="score-percent" id="scorePercent">0%</div>
+                    <p class="results-text" id="resultsText"></p>
+                    <button type="button" class="retry-btn" id="retryBtn">
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>♥ School Project 2026 ♥</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
